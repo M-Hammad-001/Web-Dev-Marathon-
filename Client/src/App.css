@@ -6,3 +6,7 @@
 
     --font-display: "Poppins", sans-serif;
 }
+
+html{
+    scroll-behavior: smooth;
+}

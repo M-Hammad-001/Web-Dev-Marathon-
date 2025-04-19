@@ -1,28 +1,49 @@
-import React from 'react'
+import {useState, useEffect, React} from 'react'
+import Reviews from './Review';
+import Register from './Register';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 20) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+
     return (
         <div>
-          <div className="navbar bg-base-100 shadow-sm fixed top-0 left-0 w-full z-50">
-            
-            {/* 🔹 Left: Logo */}
+          <div className={`navbar fixed left-0 w-full z-50 lg:px-16 py-4 transition-all duration-300 ${ scrolled ? 'bg-white/20 backdrop-blur-md py-4 shadow-md border-white/30 text-gray-900': 'bg-transparent text-gray-700'}`}>
             <div className="navbar-start">
-              <a className="btn btn-ghost text-xl">DEVSKILL</a>
+              <a className="text-xl text-gray-800 font-bold">ED Tech</a>
             </div>
     
             {/* 🔹 Center: Menu (Desktop) */}
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1 space-x-4">
-                <li><a>Home</a></li>
-                <li><a>Our Courses</a></li>
-                <li><a>Mentors</a></li>
-                <li><a>Blog</a></li>
+                <li><a href="#hero" className='hover:text-orange-500'>Home</a></li>
+                <li><a href="#courses" className='hover:text-orange-500'>Our Courses</a></li>
+                <li><a href="#mentors" className='hover:text-orange-500'>Mentors</a></li>
+                <li><a href="#reviews" className='hover:text-orange-500'>Reviews</a></li>
+                <li><a href="#faq" className='hover:text-orange-500'>FAQ</a></li>
               </ul>
             </div>
     
             {/* 🔹 Right: Button */}
             <div className="navbar-end">
-              <a className="btn">Sign-up/Login</a>
+              <Link to='/register' className="btn rounded-full">Get Started</Link>
             </div>
     
             {/* 🔹 Mobile: Dropdown Menu */}

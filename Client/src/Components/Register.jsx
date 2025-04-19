@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Register = () => {
 
@@ -22,14 +23,13 @@ const Register = () => {
   };
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
-    // try {
-    //   await axios.post("http://localhost:5000/api/auth/register", formData);
-    //   navigate("/login");
-    // } catch (err) {
-    //   setError(err.response?.data?.message || "Registration failed");
-    // }
-    console.log("hello");
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:5000/api/auth/register", formData);
+      navigate("/login");
+    } catch (err) {
+      setError(err.response?.data?.message || "Registration failed");
+    }
   };
 
   return (
@@ -78,7 +78,8 @@ const Register = () => {
             <option value="tutor">Tutor</option>
           </select>
         </div>
-        <button type="submit" className="w-full bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700 cursor-pointer">
+        <span className="text-gray-700 mb-6">Already have an account? <Link to='/login' className="text-orange-500">Log in</Link> </span>
+        <button type="submit" className="w-full bg-emerald-600 mt-4 text-white py-2 rounded hover:bg-emerald-700 cursor-pointer">
           Register
         </button>
       </form>
