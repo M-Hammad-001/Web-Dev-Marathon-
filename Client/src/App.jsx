@@ -6,6 +6,9 @@ import Login from './Components/Login'
 import Register from './Components/Register'
 import TDashboard from './Components/Teacher/TDashboard';
 
+import Hero from './Components/Hero'
+import Navbar from './Components/Navbar'
+import Courses from './Components/Courses'
 
 function App() {
 
@@ -21,6 +24,9 @@ function App() {
           <Route path="/course/:id" element={<CourseDetail />} /> */}
         </Routes>
       </Router>
+      <Hero/>
+      <Navbar/>
+      <Courses/>
     </>
   )
 }
