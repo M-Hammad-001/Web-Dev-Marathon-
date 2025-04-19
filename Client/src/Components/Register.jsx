@@ -45,7 +45,7 @@ const Register = () => {
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full mb-4 p-2 border rounded text-gray-600"
+          className="w-full mb-4 p-2 border rounded text-gray-400"
           required
         />
         <input
@@ -54,7 +54,7 @@ const Register = () => {
           placeholder="Email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full mb-4 p-2 border rounded text-gray-600"
+          className="w-full mb-4 p-2 border rounded text-gray-400"
           required
         />
         <input
@@ -63,7 +63,7 @@ const Register = () => {
           placeholder="Password"
           value={formData.password}
           onChange={handleChange}
-          className="w-full mb-4 p-2 border rounded text-gray-600"
+          className="w-full mb-4 p-2 border rounded text-gray-400"
           required
         />
         <div className="flex justify-between items-center mb-4">

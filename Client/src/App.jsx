@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home'
 import Login from './Components/Login'
 import Register from './Components/Register'
+import TDashboard from './Components/Teacher/TDashboard';
 
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* <Route path="/dashboard" element={<TDashboard />} />
-          <Route path="/course/create" element={<CreateCourse />} />
+          <Route path="/dashboard" element={<TDashboard />} />
+          {/* <Route path="/course/create" element={<CreateCourse />} />
           <Route path="/course/:id" element={<CourseDetail />} /> */}
         </Routes>
       </Router>
