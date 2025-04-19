@@ -3,17 +3,16 @@ import cors from "cors";
 import mysql from "mysql2/promise";
 
 const app = express();
-const port = 5000;
 
 // Middleware
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors());
 app.use(express.json());
 
 // MySQL Connection
 const db = await mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
+  password: "localhost@56029",
   database: "tutor",
 });
 
@@ -55,4 +54,4 @@ app.post("/api/auth/login", async (req, res) => {
   }
 });
 
-app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
+app.listen(8000, () => console.log(`Server running on http://localhost:8000`));

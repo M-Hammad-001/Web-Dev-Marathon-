@@ -9,12 +9,12 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
-    // const res = await axios.post("/api/auth/login", { email, password });
-    // setUser(res.data);
-    // if (res.data.role === "tutor") navigate("/dashboard");
-    console.log("hello");
-};
+      e.preventDefault();
+      const res = await axios.post("http://localhost:8000/api/auth/login", { email, password });
+      // setUser(res.data);
+      if (res.data.role === "tutor") navigate("/dashboard");
+      console.log("hello");
+  };
 
   return (
 
