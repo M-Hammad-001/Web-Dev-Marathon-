@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = () => {
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100 shadow-sm fixed top-0 left-0 w-full z-50">
   <div className="navbar-center">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,7 +19,7 @@ const Hero = () => {
         <li><a>Our Course</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">DEVSKILL</a>
   </div>
   <div className="navbar-start hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -34,7 +34,7 @@ const Hero = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn">Sign-up/Login</a>
   </div>
 </div>
     </div>
