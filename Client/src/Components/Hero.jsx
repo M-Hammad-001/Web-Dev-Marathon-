@@ -2,43 +2,37 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm fixed top-0 left-0 w-full z-50">
-  <div className="navbar-center">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+   <div>
+     
+     <div className="w-screen overflow-x-hidden">
+      <div className="hero min-h-screen bg-base-200 w-screen">
+        <div className="hero-content flex-col lg:flex-row-reverse justify-between items-center w-screen px-12 gap-12">
+
+          {/* Image */}
+          <img
+            src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHN0dWRlbnRzfGVufDB8fDB8fHww"
+            className="w-full max-w-md rounded-lg shadow-2xl"
+            alt="Student learning"
+          />
+
+          {/* Text */}
+          <div className="w-full max-w-2xl">
+            <h1 className="text-5xl font-bold leading-tight">
+              Smart Learning <br /> Deeper & More <span className="text-orange-500">-Amazing</span>
+            </h1>
+            <p className="py-6">
+              Empower your future with interactive, accessible, and world-class education. Our platform
+              is designed to support every learner — from curious beginners to career changers.
+              Discover the smarter way to learn, anytime and anywhere.
+            </p>
+            <button className="btn btn-primary">Start Free Trial</button>
+          </div>
+
+        </div>
       </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
-        <li>
-          <a>Pages</a>
-        </li>
-        <li><a>Our Course</a></li>
-      </ul>
-    </div>
-    <a className="btn btn-ghost text-xl">DEVSKILL</a>
-  </div>
-  <div className="navbar-start hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
-      <li>
-        <details>
-          <summary>Pages</summary>
-         
-        </details>
-      </li>
-      <li><a>Our Courses</a></li>
-    </ul>
-  </div>
-  <div className="navbar-end">
-    <a className="btn">Sign-up/Login</a>
-  </div>
-</div>
     </div>
 
+   </div>
   )
 }
 
